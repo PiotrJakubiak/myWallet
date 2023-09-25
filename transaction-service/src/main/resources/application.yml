@@ -1,0 +1,17 @@
+server:
+    port: 8090
+    servlet:
+        context-path: "/transactions"
+
+spring:
+    datasource:
+        url: "jdbc:postgresql://localhost:5433/myWalletDb"
+        username: "postgres"
+        password: "postgres"
+    jpa:
+        database-platform: "org.hibernate.dialect.PostgreSQLDialect"
+        open-in-view: false
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
