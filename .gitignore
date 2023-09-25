@@ -1,7 +1,9 @@
-/.idea
+.idea
 .project
 .classpath
 .settings/
-*/target/**
+.lst
 
 *.iml
+/config-service/target/*
+/transaction-service/target/*
