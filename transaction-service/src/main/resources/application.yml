@@ -4,6 +4,10 @@ server:
         context-path: "/transactions"
 
 spring:
+    application:
+        name: "transactions"
+    profiles:
+        active: "dev"
     datasource:
         url: "jdbc:postgresql://localhost:5433/myWalletDb"
         username: "postgres"

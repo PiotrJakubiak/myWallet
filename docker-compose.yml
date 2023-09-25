@@ -1,0 +1,32 @@
+services:
+  transactions:
+    image: "transactions:XXX"
+    container_name: transaction-service
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - myWallet
+    environment:
+      SPRING_APPLICATION_NAME: "transactions"
+      SPRING_CONFIG_IMPORT: ""
+      SPRING_PROFILES_ACTIVE: dev
+
+  config-service:
+    image: "config-service:XXX"
+    container_name: config-service
+    ports:
+      - "8071:8071"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - myWallet
+
+networks:
+  myWallet:
+    driver: bridge
