@@ -1,6 +1,6 @@
 services:
   transactions:
-    image: "transactions:XXX"
+    image: "jakpio/transaction-service:0.0.1"
     container_name: transaction-service
     ports:
       - "8080:8080"
@@ -16,7 +16,7 @@ services:
       SPRING_PROFILES_ACTIVE: dev
 
   config-service:
-    image: "config-service:XXX"
+    image: "jakpio/config-service:0.0.1"
     container_name: config-service
     ports:
       - "8071:8071"

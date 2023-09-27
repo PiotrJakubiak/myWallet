@@ -9,7 +9,7 @@ spring:
     profiles:
         active: "dev"
     datasource:
-        url: "jdbc:postgresql://localhost:5433/myWalletDb"
+        url: "jdbc:postgresql://localhost:5433/transactionsDb"
         username: "postgres"
         password: "postgres"
     jpa:
@@ -19,3 +19,5 @@ spring:
         properties:
             hibernate:
                 format_sql: true
+    config:
+      import: "optional:configserver:http://localhost:8071/"
